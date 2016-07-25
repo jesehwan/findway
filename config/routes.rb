@@ -1,4 +1,8 @@
 Findway::Application.routes.draw do
+  get "surveys/paper"
+  get "surveys/next"
+  get "surveys/finish"
+  get "surveys/result"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
