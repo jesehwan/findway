@@ -1,5 +1,7 @@
 Findway::Application.routes.draw do
-  get "surveys/paper"
+  get "/" => 'main#home'
+  get "main/step/:id" => 'main#step'
+	get "surveys/paper/:id" => 'surveys#paper'
   get "surveys/next"
   get "surveys/finish"
   get "surveys/result"

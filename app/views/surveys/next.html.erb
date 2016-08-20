@@ -1,2 +1,24 @@
-<h1>Surveys#next</h1>
-<p>Find me in app/views/surveys/next.html.erb</p>
+<h1>당신이 고른 답</h1>
+
+
+<% @check_answers.each do |answer| %>
+	<p>
+	<%= answer.text %> | 
+	<% case	answer.type_id %>
+	<% when 1  %>
+		타입 A
+	<% when 2  %>
+		타입 B
+	<% when 3  %>
+		타입 C
+	<% when 4  %>
+		타입 D
+	<% when 5  %>
+		타입 E
+	<% else 6 %>
+		타입 F
+	<% end %>		
+	</p>
+<% end %>
+<a href="/surveys/paper/1">back</a>	
+

@@ -1,0 +1,105 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navi {
+	padding-left: 25px;
+	padding-top: 40px;
+	padding-bottom:60px;
+}
+
+.brand {
+	width: 60px
+
+}
+.jumbo-img {
+	background-image: url("/images/img_background-xs.jpg") ; 
+	background-position: 30%;
+	background-size: cover;
+	box-sizing: border-box;
+}
+.img-margin{
+margin-top:20px;
+margin-bottom:10px;
+}
+.gray-ground {
+background-color: #e7e7e7;
+padding-top: 60px;
+padding-bottom: 60px;
+}
+.dark-gray-ground{
+background-color:#555555;
+padding-top:60px;
+padding-bottom:60px;
+}
+.black-ground{
+background-color:#222;
+padding-top:60px;
+padding-bottom:60px;
+} 
+.black-ground p {
+color: #aaa;
+}
+
+.home-contents {
+	padding-left:25px;
+	padding-right:25px;
+}
+.text-bold {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 1em;
+}
+.gray-ground .text-bold,
+.gray-ground .text-mid{
+	color:#161616;
+	line-height:1.8;
+	letter-spacing:-0.03em;
+}
+.gray-ground .text-mid {
+text-align:justify;
+}
+.dark-gray-ground .text-bold,
+.dark-gray-ground .text-mid{
+	color:#fff;
+	line-height:1.8;
+	letter-spacing:-0.03em;
+}
+.text-mid {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 2.5;
+	color: #fff;
+}
+.white-button {
+background-color: #fff;
+border: 1px;
+color: #474747;
+text-align: center;
+font-weight: bold;
+font-size: 1.5em;
+margin-left:5%;
+margin-right:5%;
+display: inline-block;
+text-decoration: none;
+width: 90%;
+padding: 15px;  
+margin-top:20px;
+margin-bottom: 60px;
+cursor: pointer;
+border-radius:4px;
+}
+.white-button:hover,
+.white-button:focus {
+text-decoration:none;
+color: #eee;
+background-color: #999;
+}
+.white-button:active {
+color: #eee;
+background-color: #44;
+}
+
