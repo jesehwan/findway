@@ -1,6 +1,18 @@
 <!-- 헤더 파일을 붙인다.  -->
 <%= render partial: "/surveys/header_paper" %>
+<!-- 알람영역 -->
+<% if !flash[:alert].nil? %>
+	<div class="container">
+		<div class="alert alert-danger">
+		<strong>이런!</strong> <%= flash[:alert] %>
+		</div>
+	</div>
+<% end %>
+
+
+
 <!-- 문제 설명 부분 -->
+<div style="background-color: #eee;">
 <div class="container">
 	<div class="jumbotron">
 		<h2 style="font-size: 1.8em; font-weight: bold;"><%= @question.title%></h2>
@@ -12,31 +24,7 @@
 		</div>
 	</div>
 </div>
-
-<!-- 설문 버튼부분 -->
-<div class="container">
-	<form action="/surveys/next" method="get">
-		<% @answers.each do |answer| %>
-			<% if (answer.id % 4) == 1 %>
-				<div class="row" >
-			<% end %>
-					<div class="col-xs-6 col-md-3">
-						<div class="btn-group" id="full-btn" data-toggle="buttons">
-							<label class="btn btn-primary" id="full-btn" for="<%=answer.id%>">
-					<input type="checkbox" autocomplete="off" name="check[]" id="<%=answer.id%>" value="<%=answer.id%>">
-				<%=answer.text%>
-				</label>
-						</div>
-			</div>
-			<% if (answer.id % 4) == 0 %>
-					</div><hr> 
-				<% elsif @answers.last.id == answer.id %>
-					</div>
-			
-			<% end %>
-		<% end %>
-		
-		<input class="btn btn-default btn-lg btn-block" type="submit" value="NEXT">
-
-	</form>
 </div>
+<!-- 설문 버튼부분 -->
+<%= render partial: "/surveys/form_paper_#{params[:id]}" %>
+

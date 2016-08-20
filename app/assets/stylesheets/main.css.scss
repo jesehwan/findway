@@ -45,6 +45,18 @@ color: #aaa;
 	padding-left:25px;
 	padding-right:25px;
 }
+.step-text-margin {
+margin-top:30px;
+
+}
+.text-mid-center{
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	line-height: 2;
+}
+
 .text-bold {
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size: 1.5em;
@@ -52,6 +64,14 @@ color: #aaa;
 	color: #fff;
 	margin-bottom: 1em;
 }
+.text-bold-center{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	color: #444;
+	text-align: center;
+}
+
 .gray-ground .text-bold,
 .gray-ground .text-mid{
 	color:#161616;

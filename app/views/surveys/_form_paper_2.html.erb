@@ -1,0 +1,27 @@
+<!-- 설문 버튼부분 -->
+<div class="container">
+	<form action="/surveys/next" method="get">
+		<% @answers.each do |answer| %>
+			<% if (answer.id % 4) == 1 %>
+				<div class="row" >
+			<% end %>
+					<div class="col-xs-6 col-md-3">
+						<div class="btn-group" id="full-btn" data-toggle="buttons">
+							<label class="btn btn-primary" id="full-btn" for="<%=answer.id%>">
+					<input type="checkbox" autocomplete="off" name="check[]" id="<%=answer.id%>" value="<%=answer.id%>">
+				<%=answer.text%>
+				</label>
+						</div>
+			</div>
+			<% if (answer.id % 4) == 0 %>
+					</div><hr> 
+				<% elsif @answers.last.id == answer.id %>
+					</div>
+			
+			<% end %>
+		<% end %>
+		
+		<input class="white-button" type="submit" value="NEXT">
+
+	</form>
+</div>

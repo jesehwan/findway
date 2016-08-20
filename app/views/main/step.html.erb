@@ -1,17 +1,20 @@
 <!-- 헤더 파일을 붙인다.  -->
 <%= render partial: "/surveys/header_paper" %>
+<!--메인 컨텐츠-->
 <div class="gray-ground">
 	<div class="container">
 			<img class="center-img" src="/images/img_step_pic_<%= @number %>.png" alt="설문단계" style="width:50%">
 			<img class="center-img" src="/images/img_step_<%= @number %>.png" alt="설문단계" style="width:60%; margin-top:30px;">
-			<p>첫번째 단계</p>
-			<p>사전설문</p>
-			<p>사전 설문은 상담을 위한 밑걸음입니다.<br>
-			솔직하게 자신에대해 생각하고 답해주세요.<br>
-			설문에는 약 10분이 소요됩니다. 차분하게 답해주세요<br>
+			<div class="step-text-margin">
+				<p class="text-bold-center">첫번째 단계</p>
+				<p class="text-bold-center"><strong>사전설문</strong></p>
+				<p class="text-mid-center">사전 설문은 상담을 위한 밑걸음입니다.<br>
+				솔직하게 자신에대해 생각하고 답해주세요.<br>
+				설문에는 약 10분이 소요됩니다. 차분하게 답해주세요<br>
 			</p>
+			</div>
+			<button class="white-button" onclick="location.href='/surveys/paper/1'">설문하기</button>
 
-			<button>설문시작</button>
 		</div>
 	</div> 
 </div>
