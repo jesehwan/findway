@@ -13,17 +13,17 @@
 
 <!-- 문제 설명 부분 -->
 <div style="background-color: #eee;margin-bottom: 10px;">
-<div class="container">
-	<div class="jumbotron">
-		<h2> <%= @question.title%></h2>
-		<p><%= @question.content.html_safe %></p>
-		<p style="font-size: 1em;">설문진행도</p>
-		<div class="progress">
-			<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuein="0" aria-valuemax="100" style="width: 30%;">
+	<div class="container">
+		<div class="jumbotron">
+			<h2> <%= @question.title%></h2>
+			<p><%= @question.content.html_safe %></p>
+			<p style="font-size: 1em;">설문진행도</p>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuein="0" aria-valuemax="100" style="width: 30%;">
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 <!-- 설문 버튼부분 -->
 <%= render partial: "/surveys/form_paper_#{params[:id]}" %>

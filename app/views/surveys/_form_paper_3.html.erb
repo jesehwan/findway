@@ -4,18 +4,24 @@
 	<form action="/surveys/rank" method="get">
 		<input type="hidden" name="question_id" value="3">
 		<% @answers.each do |answer| %>
-			<select name="rank[<%=answer.id%>]" id="<%=answer.id%>">
-				<option value="" disabled selected>순위</option>
-				<option value="1">1순위</option>
-				<option value="2">2순위</option>
-				<option value="3">3순위</option>
-				<option value="4">4순위</option>
-				<option value="5">5순위</option>
-				<option value="6">6순위</option>
-			</select>
-			<label for="<%=answer.id%>">
-				<%=answer.text.html_safe%>
-			</label>
+		<div class="row" id="select-row">
+			<div class="col-xs-3" id="select">
+				<select name="rank[<%=answer.id%>]" id="<%=answer.id%>">
+					<option value="" disabled selected>*순위</option>
+					<option value="1">1순위</option>
+					<option value="2">2순위</option>
+					<option value="3">3순위</option>
+					<option value="4">4순위</option>
+					<option value="5">5순위</option>
+					<option value="6">6순위</option>
+				</select>
+		</div>
+		<div class="col-xs-9" id="select-label">
+				<label for="<%=answer.id%>">
+					<%=answer.text.html_safe%>
+				</label>
+			</div>
+		</div>
 		<% end %>
 		<input class="purple-button" type="submit" value="다음단계로">
 	</form>
