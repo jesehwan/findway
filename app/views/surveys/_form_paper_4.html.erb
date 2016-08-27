@@ -1,0 +1,31 @@
+<!-- 설문 버튼부분 -->
+
+<div class="container">
+	<form action="/surveys/finish" method="get">
+		<input type="hidden" name="question_id" value="4">
+		<% p = 0 %>
+		<% @answers.each do |answer| %>
+			<% if (p % 6) == 0 %>
+			<select name="rank[<%=answer.id%>]" id="<%=answer.id%>">
+				<option value="" disabled selected>순위</option>
+				<option value="1">1순위</option>
+				<option value="2">2순위</option>
+				<option value="3">3순위</option>
+				<option value="4">4순위</option>
+				<option value="5">5순위</option>
+				<option value="6">6순위</option>
+			</select>
+				<label for="<%=answer.id%>">
+					<%=answer.text.html_safe%>
+				</label>
+			<% else %>
+				<input type="checkbox" name="check[]" id="<%=answer.id%>" value="<%=answer.id%>">
+				<label for="<%=answer.id%>"><%=answer.text%></label>
+
+			<% end %>
+						<% p = p + 1 %>
+		<% end %>
+		<input class="purple-button" type="submit" value="마지막 단계로">
+	</form>
+
+

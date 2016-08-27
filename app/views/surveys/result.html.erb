@@ -1,2 +1,23 @@
-<h1>Surveys#result</h1>
-<p>Find me in app/views/surveys/result.html.erb</p>
+
+<table style="width:80%">
+	<tr>
+			<th>id </th>
+			<th>user_id </th>
+			<th>try_number </th>
+			<th>question_id </th>
+			<th>answer_id </th>
+			<th>type_id </th>
+			<th>rank </th>
+	</tr>
+	<% @result_survey.each do |result| %>
+		<tr>
+			<td><%=result.id%></td>
+			<td><%=result.user_id%></td>
+			<td><%=result.try_number%></td>
+			<td><%=result.question_id%></td>
+			<td><%=result.answer.text.html_safe%></td>
+			<td><%=result.type_id%></td>
+			<td><%=result.rank%></td> 
+		</tr>
+<% end %>
+</table>

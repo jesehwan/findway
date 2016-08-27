@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20160725090044) do
     t.integer  "question_id"
     t.integer  "type_id"
     t.string   "text"
-    t.string   "sub_text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160725090044) do
     t.integer  "question_id"
     t.integer  "answer_id"
     t.integer  "type_id"
+    t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

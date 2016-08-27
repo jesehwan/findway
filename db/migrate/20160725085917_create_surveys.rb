@@ -6,6 +6,7 @@ class CreateSurveys < ActiveRecord::Migration
 			t.integer :question_id
 			t.integer :answer_id
 			t.integer :type_id
+			t.integer :rank
 
       t.timestamps
     end

@@ -2,7 +2,7 @@
 
 <div class="container">
 	<form action="/surveys/rank" method="get">
-		<input type="hidden" name="question_id" value="2">
+		<input type="hidden" name="question_id" value="3">
 		<% @answers.each do |answer| %>
 			<select name="rank[<%=answer.id%>]" id="<%=answer.id%>">
 				<option value="" disabled selected>순위</option>
